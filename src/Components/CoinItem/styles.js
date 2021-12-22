@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.3,
     borderBottomColor: "#282828",
     paddingTop: 15,
-    marginLeft: -20,
+    paddingBottom: 10,
   },
   popularity: {
     fontWeight: "bold",

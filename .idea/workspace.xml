@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013f4f03-d82b-4830-920d-17fb4376ea20" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CoinItem/CoinItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CoinItem/CoinItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CoinItem/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CoinItem/styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,10 +83,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="100" width="1720" height="840" key="AVDManager" timestamp="1640128743426">
+    <state x="100" y="100" width="1720" height="840" key="AVDManager" timestamp="1640205191745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="100" y="100" width="1720" height="840" key="AVDManager/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1640128743426" />
+    <state x="100" y="100" width="1720" height="840" key="AVDManager/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1640205191745" />
     <state width="1882" height="279" key="GridCell.Tab.0.bottom" timestamp="1640128635750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
