@@ -13,6 +13,9 @@ const CoinItem = ({ marketCoin }) => {
     market_cap,
     image,
   } = marketCoin;
+
+  const percentageChange =
+    price_change_percentage_24h < 0 ? "#ea3943" : "#16c784";
   const normalMarketCap = (marketCap) => {
     if (marketCap > 1000000000000) {
       return `${Math.floor(marketCap / 1000000000000)} T`;
@@ -44,10 +47,10 @@ const CoinItem = ({ marketCoin }) => {
           <AntDesign
             name="caretdown"
             size={15}
-            color="white"
+            color={percentageChange}
             style={{ alignSelf: "center", marginRight: 5 }}
           />
-          <Text style={styles.text}>
+          <Text style={{ color: percentageChange }}>
             {price_change_percentage_24h.toFixed(2)}%
           </Text>
         </View>
