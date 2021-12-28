@@ -1,5 +1,5 @@
-import React from "react";
-import { View, Text, Image, Dimensions } from "react-native";
+import React, { useState, useEffect } from "react";
+import { View, Text, Image, Dimensions, TextInput } from "react-native";
 import Coin from "../../../data/crypto.json";
 import styles from "./styles";
 import CoinDetailHeader from "./CoinDetailHeader";
@@ -24,9 +24,24 @@ const CoinDetailScreen = () => {
     },
     prices,
   } = Coin;
+
+  const [coinValue, setCoinValue] = useState("1");
+  const [usdValue, setUsdValue] = useState(current_price.usd.toString());
+  const changeCoinValue = (value) => {
+    setCoinValue(value);
+    const floatValue = parseFloat(value.replace(",", ".")) || 0;
+    setUsdValue((value * current_price.usd).toString());
+  };
+  const changeUsdValue = (value) => {
+    setUsdValue(value);
+    const floatValue = parseFloat(value.replace(",", ".")) || 0;
+    setCoinValue((value / current_price.usd).toString());
+  };
+
   const chartColor = current_price.usd > prices[0][1] ? "#16c784" : "#ea4943";
 
   const screenWidth = Dimensions.get("window").width;
+
   const formatCurrency = (value) => {
     "worklet";
     if (value === "") {
@@ -91,6 +106,28 @@ const CoinDetailScreen = () => {
               backgroundColor: chartColor,
             }}
           />
+        </View>
+        <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: "row", flex: 1 }}>
+            <Text style={{ color: "white", alignSelf: "center" }}>
+              {symbol.toUpperCase()}
+            </Text>
+            <TextInput
+              style={styles.input}
+              value={coinValue.toString()}
+              keyboardType="numeric"
+              onChangeText={changeCoinValue}
+            />
+          </View>
+          <View style={{ flexDirection: "row", flex: 1 }}>
+            <Text style={{ color: "white", alignSelf: "center" }}>USD </Text>
+            <TextInput
+              style={styles.input}
+              value={usdValue.toString()}
+              keyboardType="numeric"
+              onChangeText={changeUsdValue}
+            />
+          </View>
         </View>
       </ChartPathProvider>
     </View>
